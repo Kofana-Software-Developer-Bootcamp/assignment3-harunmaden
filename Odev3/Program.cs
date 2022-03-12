@@ -21,12 +21,14 @@ namespace Odev3
             while (baskaKayit == 2)
             {
                 Console.WriteLine("Tc kimlik numaranızı Giriniz:");
+                
                 string tc = Console.ReadLine();
                 int kayitKontrol = 1;
                 foreach (var item in memberList.idNumberList)
                 {
                     if (item.Number == tc)
-                    {
+                    {   Console.WriteLine("");
+                        Console.WriteLine("Kayıtlı kullanıcı");
                         Console.WriteLine("isim: {0}", item.Name);
                         Console.WriteLine("Soyisim: {0}", item.Surname);
                         Console.WriteLine("Tc Kimlik Numarası: {0}", item.Number);
@@ -34,9 +36,7 @@ namespace Odev3
                         kayitKontrol = 0;
                         break;
                     }
-
                 }
-
                 if (kayitKontrol == 1)
                 {
                     SaveNumber(tc);
@@ -64,6 +64,7 @@ namespace Odev3
                 }
                 Console.WriteLine("Uygulamadan çıkılsın :1, Başka bir sipariş 2");
                 baskaKayit = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
 
             }
         }
@@ -87,6 +88,7 @@ namespace Odev3
                 Console.WriteLine();
                 return MarkaMethod();
             }
+            Console.WriteLine("-");
             return smarka;
         }
         static string RenkMethod()
@@ -112,6 +114,7 @@ namespace Odev3
                 Console.WriteLine();
                 return RenkMethod();
             }
+            Console.WriteLine("-");
             return srenk;
         }
         static string TaksitMethod()
@@ -133,6 +136,7 @@ namespace Odev3
                 Console.WriteLine();
                 return TaksitMethod();
             }
+            Console.WriteLine("-");
             return staksit;
         }
         public static void SaveNumber(string tc)
@@ -143,7 +147,10 @@ namespace Odev3
             string surname = Console.ReadLine();
             string number = tc;
             memberList.idNumberList.Add(new NumberModel(name, surname, number));
+            Console.WriteLine("");
+            Console.WriteLine("Yeni Kayıt Oluşturuldu");
         }
+
         public static void wiev()
         {
             Console.WriteLine("isim: {0}", memberList.idNumberList[memberList.idNumberList.Count - 1].Name);
