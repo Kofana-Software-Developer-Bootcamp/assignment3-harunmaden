@@ -3,7 +3,7 @@ assignment3-harunmaden created by GitHub Classroom
 
 Müşteri Sipariş CLI Detaylar
 
-*ilk açılışta tc alır
+*ilk açılışta tc alır /n
 *eğer array de mevcutta tanımlıysa müşterinin ismi ekrana gelir
              *yoksa yeni müşteri kayıt ekranı gelir (ad,soyad,gsm vb)
 *satılacak ürün seçilir. adet seçilir. (hayal gücünüze göre; rengi, indirimi falan seçilebilir)
